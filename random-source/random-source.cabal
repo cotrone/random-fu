@@ -48,7 +48,7 @@ Library
   other-modules:        Data.Random.Source.Internal.Prim
                         Data.Random.Source.Internal.TH
   
-  if impl(ghc >= 6.10)
+  if impl(ghc >= 6.10) || impl(ghcjs)
     -- mwc-random depends on vector, which doesn't build on GHC < 6.10.
     -- I considered breaking this module out into another package, but I
     -- think this is sufficient; anyone compiling something which wants
